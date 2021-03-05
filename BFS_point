@@ -195,7 +195,7 @@ def moveDownLeft(x,y,cost,p):
     return x,y,location,cost,p
 
 def moveUpLeft(x,y,cost,p):
-    p = 'p + H'
+    p = p + 'H'
     y += 1
     x -= 1
     cost += np.sqrt(2)
