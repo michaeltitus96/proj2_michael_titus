@@ -554,7 +554,10 @@ while current_x != goal_x or current_y != goal_y:       #runs until goal is met
 for i in locations:     #displays travelled to locations as gray on image map
     locx = int(i[0:3])
     locy = int(i[3:])
-    image[locx,locy] = 190
+    if locx > 0 and locx < 404 and locy > 0 and locy < 300:
+        image[locx,locy] = 190
+    else:
+        pass
     
 opt_x = copy.deepcopy(start_x)
 opt_y = copy.deepcopy(start_y)
